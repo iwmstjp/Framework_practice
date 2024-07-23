@@ -7,6 +7,11 @@ export default function Weather() {
   const [loading, setLoading] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
   const key = data;
+  useEffect(
+    ()=> {
+        document.title="Weather App"
+    }
+);
 
   async function fetchWeatherData(param) {
     setLoading(true);
